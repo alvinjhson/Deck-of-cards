@@ -1,5 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Card heart3 = new Card(3,"heart");
+
+        System.out.println(heart3);
+
+
+
     }
 }

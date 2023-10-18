@@ -46,11 +46,19 @@ public class Card {
         card2.setType(card2Symbol);
         System.out.println(card2);
 
-        if (card1.getValue() + card1.getType() == card2.getValue() + card2.getType()){
+        if (card1.equals(card2)){
             System.out.println("These cards are the same");
         }else System.out.println("Not the same cards");
+    }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Card card = (Card) obj;
+        return value == card.value && type == card.type;
     }
 
   

@@ -1,21 +1,18 @@
 public class Card {
-    private int cardRank;
-    private String symbol;
+    private int type,value;
+    private String[] cardSymbol = {"Clubs","Spades","Diamonds","Hearts"};
+    private String[] cardRank = {"Ace","king","Queen","Jack","10","9","8","7","6","5","4","3"
+    ,"2"};
 
-    public Card(int cardRank, String symbol) {
-        this.cardRank = cardRank;
-        this.symbol = symbol;
+    public Card(int type, int value) {
+        this.type = type;
+        this.value = value;
     }
 
-    public int getCardRank() {
-        return cardRank;
-    }
 
-    public String getSymbol() {
-        return symbol;
-    }
 
     public String toString(){
-        return "The card is " + getSymbol() + getCardRank();
+        String finalCard = cardRank[value] + " of " + cardSymbol[type];
+        return finalCard;
     }
 }

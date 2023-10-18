@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Card {
+
     Scanner sc = new Scanner(System.in);
     private int type,value;
     private String[] cardSymbol = {"Clubs","Spades","Diamonds","Hearts"};
@@ -51,6 +52,8 @@ public class Card {
 
 
     }
+
+  
 
 @Override
     public String toString(){

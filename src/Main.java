@@ -3,6 +3,7 @@ public class Main {
 
        Card heart3 = new Card(0,0);
        heart3.compareCards();
+       heart3.listAllCards();
 
 
 

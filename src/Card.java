@@ -70,6 +70,11 @@ public class Card {
         }
         return false;
     }
+    public void listAllCards(){
+        for (int i = 0; i<12;i++)
+        System.out.println(cardRank[value++] + " of " + cardSymbol[type]);
+
+    }
     @Override
     public String toString(){
         String finalCard = cardRank[value] + " of " + cardSymbol[type];

@@ -5,8 +5,7 @@ public class Card {
     Scanner sc = new Scanner(System.in);
     private int type,value;
     private String[] cardSymbol = {"Clubs","Spades","Diamonds","Hearts"};
-    private String[] cardRank = {"Ace","king","Queen","Jack","10","9","8","7","6","5","4","3"
-            ,"2"};
+    private String[] cardRank = {"2","3","4","5","6","7","8","9","Jack","Queen","king","Ace"};
 
     public Card(int type, int value) {
         this.type = type;
@@ -46,9 +45,11 @@ public class Card {
         card2.setType(card2Symbol);
         System.out.println(card2);
 
-        if (card1.equals(card2)){
-            System.out.println("These cards are the same");
-        }else System.out.println("Not the same cards");
+        if (card1.isHigherThan(card2)) {
+            System.out.println("card one is higher");
+        } else {
+            System.out.println("card two is higher");
+        }
     }
 
     @Override
@@ -60,10 +61,16 @@ public class Card {
         Card card = (Card) obj;
         return value == card.value && type == card.type;
     }
+    public boolean isHigherThan(Card otherCard) {
+        if (this.value > otherCard.value) {
+            return true;
+        } else if (this.value == otherCard.value) {
 
-  
-
-@Override
+            System.out.println("Same value");
+        }
+        return false;
+    }
+    @Override
     public String toString(){
         String finalCard = cardRank[value] + " of " + cardSymbol[type];
         return finalCard;
